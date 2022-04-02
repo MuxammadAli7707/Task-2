@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 *,
 *::after,
 *::before {
@@ -7,9 +8,97 @@
 }
 
 body {
-  background-color: #fff;
+  background-color: #7d2ca6;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  padding: 30px;
+  background-color: #fefdfe;
+  box-shadow: 1px 1px 5px #000;
+  border-radius: 10px;
+}
+.card__list {
+  list-style: none;
+}
+.card__btn:not(:last-child) {
+  margin-bottom: 15px;
+}
+.card__btn {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+}
+.card__num {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #4c4b4ba2;
+  color: #fff;
+  font-size: 20px;
+  margin-right: 12px;
+}
+.card__title {
+  font-weight: 500;
+  font-size: 22px;
+  color: #4c4b4ba2;
+}
+.active {
+  background-color: indigo;
+}
+.actives {
+  color: #19010e;
+}
+.card__show {
   display: flex;
   flex-direction: column;
 }
 
+.result__title {
+  font-weight: 500;
+  font-size: 22px;
+  color: #19010e;
+  margin-bottom: 55px;
+}
+.result__btn {
+  background-color: #cdcdcd;
+  border-radius: 5px;
+  font-size: 20px;
+  border: none;
+  padding: 8px 12px;
+  margin-right: 10px;
+}
+.card__btns {
+  display: flex;
+}
+.result__text {
+  display: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: red;
+}
+
+#back {
+  display: none;
+}
+#submit {
+  display: none;
+}
+#go-back {
+  display: none;
+}
+
+#ahead {
+  display: none;
+}
