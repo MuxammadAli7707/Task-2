@@ -129,3 +129,4 @@ ahead.addEventListener("click", () =>{
   submit.style.display = "none";
   resultOne.style.display = "none";
 });
+
