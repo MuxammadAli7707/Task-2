@@ -13,7 +13,7 @@ let titleThree = document.querySelector(".title__three");
 let resultText = document.getElementById("result-text");
 let resultTitle = document.getElementById("title");
 
-
+let count = 1;
 btnOne.addEventListener("click", () =>{
   resultTitle.textContent = `Choose Title content`;
   resultTitle.style.display = "block";
@@ -27,6 +27,7 @@ btnOne.addEventListener("click", () =>{
   numThree.classList.remove("active");
   titleThree.classList.remove("actives");
   resultText.style.display = "none";
+  count = 2;
 });
 back.addEventListener("click", () =>{
   resultTitle.textContent = `Choose Title content`;
@@ -56,6 +57,7 @@ btnTwo.addEventListener("click", () =>{
   numThree.classList.remove("active");
   titleThree.classList.remove("actives");
   resultText.style.display = "none";
+  count = 3;
 });
 
 resultOne.addEventListener("click", () =>{
@@ -89,16 +91,20 @@ goBack.addEventListener("click", () =>{
 });
 
 btnThree.addEventListener("click", () =>{
-  resultTitle.textContent = `Are You Happy?`;
-  resultTitle.style.display = "block";
-  numThree.classList.add("active");
-  titleThree.classList.add("actives");
-  resultOne.style.display = "none";
-  back.style.display = "none";
-  submit.style.display = "none";
-  goBack.style.display = "block";
-  ahead.style.display = "block";
-  resultText.style.display = "none";
+  if(count == 3){
+    resultTitle.textContent = `Are You Happy?`;
+    resultTitle.style.display = "block";
+    numThree.classList.add("active");
+    titleThree.classList.add("actives");
+    resultOne.style.display = "none";
+    back.style.display = "none";
+    submit.style.display = "none";
+    goBack.style.display = "block";
+    ahead.style.display = "block";
+    resultText.style.display = "none";
+  } else {
+    alert("Sorry ! You don't move next");
+  }
 });
 
 submit.addEventListener("click", () =>{
